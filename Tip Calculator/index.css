@@ -1,0 +1,261 @@
+@font-face {
+    font-family: SpaceMono;
+    src: url(SpaceMono-Regular.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: hsl(172, 67%, 45%);
+    --color1: hsl(183, 100%, 15%);
+    --color2: hsl(186, 14%, 43%);
+    --color3: hsl(184, 14%, 56%);
+    --color4: hsl(185, 41%, 84%);
+    --color5: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+p{
+    font-family: SpaceMono;
+    color: var(--color1);
+    font-size: .6rem;
+    font-weight: 700;
+    margin: .3rem 0;
+}
+h3{
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.container{
+    font-family: SpaceMono sans-serif;
+    background-color: var(--color4);
+    height: 100vh;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;   
+}
+
+.logo{
+    height: 2.5rem;
+    margin: 2rem;
+}
+
+.calculator{
+    background-color: var(--White);
+    padding: 0 0 0;
+    border-radius: 1rem;
+    font-family: SpaceMono;
+}
+
+.input-section{
+    background-color: none;
+    padding: 1rem;
+    margin: .5rem;
+}
+.input-section > div{
+    margin: 1.2rem 0 0;
+}
+
+.input--1{
+    width: 100%;
+    height: 2rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: var(--color5);
+    background-image:url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-size: .5rem;
+    background-position-y: center;
+    background-position-x: .5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: right;
+    padding: 0 1rem 0;
+    color: var(--color1);
+    font-family: SpaceMono;
+}
+.input--1::-webkit-outer-spin-button,
+.input--1::-webkit-inner-spin-button,
+.input--2::-webkit-outer-spin-button,
+.input--2::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input--1::placeholder,
+.input--2::placeholder{
+    font-size: 1rem;
+    color: var(--color3);
+}
+
+.btn-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background-color: inherit;  
+    grid-gap: .6rem;  
+}
+.btn{
+    background-color: var(--color1);
+    color: var(--White);
+    font-family: SpaceMono;
+    border: none;
+    border-radius: .3rem;
+    height: 2.6rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.custom{
+    background-color: var(--color5);
+    border: none;
+    height: 2.7rem;
+    border-radius: .3rem;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: right;
+    padding: 0 1rem 0;
+    color: var(--color1);
+    font-family: SpaceMono;
+}
+.custom::placeholder{
+    font-family: SpaceMono;
+    color: var(--color1);
+    text-align: center;
+}
+.custom:focus::placeholder {
+    color: transparent;
+
+  }
+
+.input--2{
+    width: 100%;
+    height: 2rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: var(--color5);
+    background-image:url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-size: .5rem;
+    background-position-y: center;
+    background-position-x: .5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: right;
+    padding: 0 1rem 0;
+    color: var(--color1);
+    font-family: SpaceMono;
+}
+.input--1:focus::placeholder,
+.input--2:focus::placeholder {
+    color: transparent;
+}
+
+
+.display-section{
+    background-color: var(--color1);
+    padding: 1.5rem 1.5rem 0;
+    border-radius: 1rem;
+}
+
+.tip-amount,
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total{
+    margin: 1rem 0;
+}
+
+.tip-amount > p, 
+.total > p{
+    color: var(--White);
+}
+
+.tip-amount > p::after,
+.total > p::after{
+    content: '/ person';
+    display: block;
+    font-weight: 50;
+    color: var(--primary);
+}
+
+.reset-btn{
+    width: 100%;
+    margin: 0 0 1rem;
+    border-radius: .3rem;
+    height: 2.6rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+.active{
+    background-color: var(--primary);
+    color: var(--color1);
+}
+
+.errorMessage,
+.errorMessage2{
+    text-align: right;
+    font-family: SpaceMono;
+    color: rgba(194, 50, 50, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Design for desktop using a minimum width of 800px*/
+@media (min-width:800px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .calculator{
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 2fr));
+    }
+    .display-section{
+        padding: 4rem 1.5rem 0;
+    }
+    .reset-btn{
+        margin: 8rem 0 0;
+    }
+
+    .reset-btn:hover,
+    .btn:hover{
+        background-color: var(--color4);
+        transition: ease-in-out .3s;
+        color: var(--color1);
+    }
+
+    .custom:focus,
+    .input--1:focus,
+    .input--2:focus{
+        border: 0px solid var(--color4);
+    }
+}

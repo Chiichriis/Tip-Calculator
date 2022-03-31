@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="container">
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="The logo" class="logo">
+        </div>
+        <div class="calculator">
+            <div class="input-section">
+                <div class="bill">
+                    <p class="">Bill</p>
+                    <p class="errorMessage"></p>
+                    <input type="number" class="input--1" id="input1" placeholder="0">
+                </div>
+                <div class="tips">
+                    <p class="">Select Tip %</p>
+                    <div class="btn-container">
+                        <button class="btn">5%</button>
+                        <button class="btn">10%</button>
+                        <button class="btn">15%</button>
+                        <button class="btn">25%</button>
+                        <button class="btn">50%</button>
+                        <input type="text" class = "custom" id="custom" placeholder="Custom">                   
+                    </div>
+                </div>
+                <div class="people">
+                    <p class="">Number of People</p>
+                    <p class="errorMessage2"></p>
+                    <input type="number" class="input--2" id="input2" placeholder="0">
+                </div>
+            </div>
+
+            <div class="display-section">
+                <div class="tip-amount">
+                    <p class="">Tip Amount</p>
+                    <h3 id = "display1">$0.00</h3>
+                </div>
+                <div class="total">
+                    <p class="">Total</p>
+                    <h3 id="display2">$0.00</h3>
+                </div>
+                <button class="reset-btn" id="reset">RESET</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
